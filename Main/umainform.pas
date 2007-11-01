@@ -976,14 +976,15 @@ procedure TMainForm.KillRobots();
 var
   i: Integer;
 begin
-  for i := Low(MyWorldPlayers[GetAbs(MyRoomNum)]) to High(MyWorldPlayers[GetAbs(MyRoomNum)]) do
+  i := Low(MyWorldPlayers[GetAbs(MyRoomNum)]);
+  while i <= High(MyWorldPlayers[GetAbs(MyRoomNum)]) do
   begin
     if IsWild(GetPictureName(MyWorldPlayers[GetAbs(MyRoomNum)][i].PicIndex), 'robot*.bmp', false) then // robot
-    begin
-      RemovePlayer(GetAbs(MyRoomNum), i);
-      KillRobots(); // search again because index numbering changed
-      exit;
-    end;
+      RemovePlayer(GetAbs(MyRoomNum), i)
+    else
+      // do this only if we want to continue with the next player
+      // if we have removed the player i, we have a new player at index i
+      inc(i);
   end;
 end;
 
@@ -1193,7 +1194,8 @@ begin
 
   ppos := MyWorldPlayers[GetAbs(MyRoomNum)][f].Pos;
 
-  for i := Low(MyWorldPlayers[GetAbs(MyRoomNum)]) to High(MyWorldPlayers[GetAbs(MyRoomNum)]) do
+  i := Low(MyWorldPlayers[GetAbs(MyRoomNum)]);
+  while i <= High(MyWorldPlayers[GetAbs(MyRoomNum)]) do
   begin
     s := GetPictureName(MyWorldPlayers[GetAbs(MyRoomNum)][i].PicIndex);
     if (IsWild(s, 'robot*.bmp', false))
@@ -1215,8 +1217,7 @@ begin
           newpos.Y := newpos.Y - 1;
       end;
 
-      if (newpos.X = ppos.X)
-      and (newpos.Y = ppos.Y) then
+      if (newpos.X = ppos.X) and (newpos.Y = ppos.Y) then
       begin
         if s = 'konig.bmp' then
         begin
@@ -1253,7 +1254,7 @@ begin
           begin
             RemovePlayer(GetAbs(MyRoomNum), i);
             ShowMsg([
-                     'Hurra, der KÃ¶nig ist tot!',
+                     'Hurra, der König ist tot!',
                      'Das Spiel ist gewonnen!',
                      'Toll, ich habe es geschafft!'
                      ]);
@@ -1299,8 +1300,7 @@ begin
           SetPlacePicName(newpos, BACKGROUND_PIC);
         end;
         DrawRoom();
-        ControlComputerPlayers(); // index numbering changed
-        exit;
+        continue; // we have at index i a new player now, so let's check again
       end;
 
       if GetPlace(newpos).PicIndex = GetPictureCacheIndex(BACKGROUND_PIC) then
@@ -1341,6 +1341,8 @@ begin
         end;
       end;
     end;
+    
+    inc(i);
   end;
 end;
 
