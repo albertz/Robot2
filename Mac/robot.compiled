@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <Compiler Value="/usr/local/bin/ppcppc" Date="1132070326"/>
+  <Params Value=" -S2cgi -OG1 -gl  -k-framework -kcarbon -WG -vewnhix -l -Fl/usr/X11R6/lib/ -Fl/sw/lib/ -Fu/Users/az/Programmierung/lazarus/lcl/units/powerpc-darwin/ -Fu/Users/az/Programmierung/lazarus/lcl/units/powerpc-darwin/carbon/ -Fu/Users/az/Programmierung/lazarus/packager/units/powerpc-darwin/ -Fu. -dLCL -dLCLcarbon robot.lpr"/>
+</CONFIG>

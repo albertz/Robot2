@@ -1,0 +1,31 @@
+object MainForm: TMainForm
+  BorderIcons = [biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Robot 1.5'
+  ClientHeight = 510
+  ClientWidth = 405
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyDown = FormKeyDown
+  OnPaint = FormPaint
+  OnResize = FormResize
+  PixelsPerInch = 75
+  HorzScrollBar.Page = 404
+  VertScrollBar.Page = 509
+  Left = 256
+  Height = 510
+  Top = 153
+  Width = 405
+  object GamePanel: TPanel
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ClientHeight = 402
+    ClientWidth = 405
+    Color = clSilver
+    FullRepaint = False
+    ParentColor = False
+    TabOrder = 0
+    Height = 402
+    Width = 405
+  end
+end

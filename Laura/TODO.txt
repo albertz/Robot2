@@ -1,0 +1,170 @@
+TODO
+
+Rucksatz
+
+Sub Einsatz
+	ist was ausgewählt? nein => Fehler
+	wenn Schlüssel ('schl*.bmp') => Fehler
+	Einsatzsound (einsatz.wav)
+	wenn Ätzflüssigkeit ('aetz.bmp') =>
+		normale Wand ('wand1.bmp') in allen 4 Richtungen löschen
+		wenn keine Wand zum wegätzen da ist => Fehler
+		entferne Einsatz
+		Exit Sub
+	wenn Lebenselexier ('leben.bmp') =>
+		wenn schon 10 Leben => Fehler (nich mehr)
+		Leben erhöhen um 1
+		entferne Einsatz
+		Exit Sub
+	wenn Diamant ('diamant*.bmp') =>
+		wenn keine Diamantstelle nebenan (4 Himmelsrichtungen) => Fehler
+		entferne Diamantenstelle
+		merke gesetzen Diamant (Code)
+		Punkte um 1000 erhöhen
+		entferne Einsatz
+		Exit Sub
+	wenn Speicherelement ('speicher.bmp') =>
+		Speicherdialog öffnen (Erweiterung '.spi')
+		wenn korrekte Datei => SaveGame(filename)
+		sonst => Fehler
+		entferne Einsatz
+		Exit Sub
+
+Sub Laufe
+	was ist an neuer Position?
+	-> Elektrozaun ('wand3.bmp') =>
+		Sound 'strom.wav'
+		Leben = 0 => GameOver
+		ein Leben abziehen
+		Exit Sub
+	-> normale Wand ('wand1.bmp') oder harte Wand ('wand2.bmp') =>
+		Sound 'fl.wav'
+		Exit Sub
+	-> Diamantenstelle ('code*.bmp') =>
+		Sound 'fl.wav'
+		Exit Sub
+	-> König ('konig.bmp') =>
+		Sound 'konig.wav'
+		Leben = 0 => GameOver
+		ein Leben abziehen
+		Figur in die Ecke setzen (absolute Pos: 22)
+		Exit Sub
+	-> Punkte ('punkt*.bmp') =>
+		Sound 'punkt.wav'
+		Punkte um 1000 erhöhen
+	-> Killer ('kill.bmp') =>
+		Sound 'rl.wav'
+		ToeteAlleRoboter
+	-> Schlüssel ('schl*.bmp) =>
+		Sound 'einsatz.wav'
+		Rucksack voll? ja => Fehler
+		Punkte um 500 erhöhen
+		Schlüssel in den Rucksack packen
+	-> Ätzflüssigkeit ('aetz.bmp') =>
+		Sound 'einsatz.wav'
+		Rucksack voll? ja => Fehler
+		Punkte um 500 erhöhen
+		Ätzflüssigkeit in den Rucksack packen
+	-> Leben ('leben.bmp') =>
+		Sound 'einsatz.wav'
+		Rucksack voll? ja => Fehler
+		Punkte um 500 erhöhen
+		Leben in den Rucksack packen
+	-> Speicherelement ('speicher.bmp') =>
+		Sound 'einsatz.wav'
+		Rucksack voll? ja => Fehler
+		Punkte um 500 erhöhen
+		Speicherelement in den Rucksack packen
+	-> Diamant ('diamant*.bmp') =>
+		Sound 'punkt.wav'
+		Rucksack voll? ja => Fehler
+		Punkte um 1000 erhöhen
+		Diamant in den Rucksack packen
+	-> Tür ('tuer*.bmp') =>
+		Sound 'fl.wav'
+		wenn richtiger Schlüssel nicht vorhanden => Fehler
+	ist neue Position im Rand drin? ja =>
+		entsprechender Raumwechsel (Tür-Handling nicht vergessen!)
+	bewege Figur zur neuen Position (Tür-Handling nicht vergessen!)
+
+Sub BewegeKoenig
+	ist im Pause-Modus? ja => Exit Sub
+	Figur nicht im aktuellen Raum? ja => Exit Sub
+	neue Position ist Richtung Figur
+	was ist neue Position?
+	-> Figur ('figur.bmp') =>
+		Sound 'konig.wav'
+		Leben = 0 => GameOver
+		ein Leben abziehen
+		Figur in die Ecke setzen (absolute Pos: 22)
+		Exit Sub
+	-> Elektrozaun ('wand3.bmp') =>
+		alle 3 Diamanten gesetzt? ja =>
+			Sieg!
+			HighScore
+			nochmal?
+			Ende
+	-> normale Wand ('wand1.bmp') oder harte Wand ('wand2.bmp') =>
+		Exit Sub
+	-> Diamantenstelle ('code*.bmp') =>
+		Exit Sub
+	-> Tür ('tuer*.bmp') =>
+		Exit Sub
+	setze König an die neue Position
+	
+Sub BewegeRoboter
+	ist im Pause-Modus? ja => Exit Sub
+	Figur nicht im aktuellen Raum? ja => Exit Sub
+	für alle Roboter im Raum ->
+		neue Position ist Richtung Figur
+		Sound 'rl.wav'
+		was ist neue Position?
+		-> Figur ('figur.bmp') =>
+			Sound 'robot.wav'
+			Leben = 0 => GameOver
+			ein Leben abziehen
+			töte Roboter
+			NextRoboter
+		-> Elektrozaun ('wand3.bmp') =>
+			töte Roboter
+			NextRoboter
+		-> (anderer) Roboter ('robot*.bmp')
+		oder normale oder harte Wand ('wand{2,3}.bmp')
+		oder Tür ('tuer*.bmp')
+		oder Diamantenstelle ('code*.bmp') =>
+			NextRoboter
+		bewege Roboter zur neuen Position
+		NextRoboter
+
+Sub GameOver
+	noch mal?
+
+Sub ProgrammEnde
+	Sound 'ende.wav'
+	nachfragen, wirklich beenden? nein => Exit Sub
+	Ende
+
+Sub ProgrammStart
+	Sound 'newgame.wav'
+	[Handling von 'daten.dat' ...]
+
+Sub SaveGame(filename)
+	Format:
+		Raumnummer
+		Name
+		Punkte
+		Leben
+		Diamantenstatus1
+		Diamantenstatus2
+		Diamantenstatus3
+		Tür (?? speichert, ob man an der Position einer Tür ist)
+		":RUCK"
+		{Rucksackelemente (bmp-Dateien)}
+		{weiter mit Format von sci-Datei}
+
+Sub SaveWorld(filename)
+	// später!
+
+Sub HighScore // später!
+
+Sub Hilfe // später!

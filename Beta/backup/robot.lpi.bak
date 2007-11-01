@@ -1,0 +1,434 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <PathDelim Value="\"/>
+    <Version Value="5"/>
+    <General>
+      <MainUnit Value="0"/>
+      <IconPath Value="./"/>
+      <TargetFileExt Value=""/>
+      <Title Value="Robot"/>
+      <ActiveEditorIndexAtStart Value="0"/>
+    </General>
+    <PublishOptions>
+      <Version Value="2"/>
+      <DestinationDirectory Value="$(TestDir)\publishedproject\"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="\usr\X11R6\bin\xterm -T 'Lazarus Run Output' -e $(LazarusDir)\tools\runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="1">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+    </RequiredPackages>
+    <Units Count="35">
+      <Unit0>
+        <Filename Value="robot.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="robot"/>
+        <CursorPos X="14" Y="10"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="4"/>
+        <UsageCount Value="115"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="umainform.pas"/>
+        <ComponentName Value="MainForm"/>
+        <IsPartOfProject Value="True"/>
+        <ResourceFilename Value="umainform.lrs"/>
+        <UnitName Value="uMainForm"/>
+        <CursorPos X="51" Y="449"/>
+        <TopLine Value="439"/>
+        <EditorIndex Value="0"/>
+        <UsageCount Value="115"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="usr\local\share\lazarus\lcl\graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <CursorPos X="35" Y="1431"/>
+        <TopLine Value="1837"/>
+        <UsageCount Value="37"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="usr\local\share\lazarus\lcl\graphtype.pp"/>
+        <UnitName Value="GraphType"/>
+        <CursorPos X="20" Y="41"/>
+        <TopLine Value="722"/>
+        <UsageCount Value="37"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="usr\local\share\fpcsrc\rtl\objpas\sysutils\sysstrh.inc"/>
+        <CursorPos X="60" Y="174"/>
+        <TopLine Value="148"/>
+        <UsageCount Value="37"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="usr\local\share\fpcsrc\rtl\objpas\strutils.pp"/>
+        <UnitName Value="strutils"/>
+        <CursorPos X="20" Y="356"/>
+        <TopLine Value="332"/>
+        <UsageCount Value="34"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="usr\local\share\fpcsrc\rtl\inc\mathh.inc"/>
+        <CursorPos X="63" Y="50"/>
+        <TopLine Value="3"/>
+        <UsageCount Value="36"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="usr\local\share\fpcsrc\rtl\objpas\classes\classesh.inc"/>
+        <CursorPos X="47" Y="571"/>
+        <TopLine Value="552"/>
+        <UsageCount Value="23"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="usr\local\share\lazarus\lcl\include\bitmap.inc"/>
+        <CursorPos X="1" Y="149"/>
+        <TopLine Value="263"/>
+        <UsageCount Value="2"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="usr\local\share\lazarus\lcl\extctrls.pp"/>
+        <UnitName Value="ExtCtrls"/>
+        <CursorPos X="23" Y="909"/>
+        <TopLine Value="890"/>
+        <UsageCount Value="5"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="usr\local\share\lazarus\lcl\controls.pp"/>
+        <UnitName Value="Controls"/>
+        <CursorPos X="15" Y="43"/>
+        <TopLine Value="38"/>
+        <UsageCount Value="30"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="usr\local\share\lazarus\lcl\forms.pp"/>
+        <UnitName Value="Forms"/>
+        <CursorPos X="16" Y="514"/>
+        <TopLine Value="495"/>
+        <UsageCount Value="7"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="usr\local\share\fpcsrc\rtl\objpas\sysutils\filutilh.inc"/>
+        <CursorPos X="10" Y="61"/>
+        <TopLine Value="61"/>
+        <UsageCount Value="6"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="usr\local\share\fpcsrc\rtl\inc\systemh.inc"/>
+        <CursorPos X="16" Y="557"/>
+        <TopLine Value="526"/>
+        <UsageCount Value="7"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="usr\local\share\fpcsrc\rtl\objpas\objpas.pp"/>
+        <UnitName Value="objpas"/>
+        <CursorPos X="33" Y="93"/>
+        <TopLine Value="1"/>
+        <UsageCount Value="7"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="usr\local\share\fpcsrc\fcl\image\fpimage.pp"/>
+        <UnitName Value="FPimage"/>
+        <CursorPos X="10" Y="267"/>
+        <TopLine Value="88"/>
+        <UsageCount Value="8"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="usr\local\share\lazarus\lcl\dialogs.pp"/>
+        <UnitName Value="Dialogs"/>
+        <CursorPos X="14" Y="455"/>
+        <TopLine Value="429"/>
+        <UsageCount Value="7"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="usr\local\share\lazarus\lcl\include\commondialog.inc"/>
+        <CursorPos X="1" Y="100"/>
+        <TopLine Value="63"/>
+        <UsageCount Value="7"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="usr\local\share\lazarus\lcl\include\promptdialog.inc"/>
+        <CursorPos X="1" Y="559"/>
+        <TopLine Value="524"/>
+        <UsageCount Value="7"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="usr\local\share\lazarus\lcl\include\messagedialogs.inc"/>
+        <CursorPos X="1" Y="276"/>
+        <TopLine Value="239"/>
+        <UsageCount Value="7"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="usr\local\share\fpcsrc\rtl\unix\sysunixh.inc"/>
+        <CursorPos X="2" Y="28"/>
+        <TopLine Value="9"/>
+        <UsageCount Value="7"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="usr\local\share\lazarus\lcl\dynhasharray.pp"/>
+        <UnitName Value="DynHashArray"/>
+        <CursorPos X="1" Y="341"/>
+        <TopLine Value="321"/>
+        <UsageCount Value="9"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="usr\local\share\fpcsrc\rtl\unix\sysutils.pp"/>
+        <UnitName Value="sysutils"/>
+        <CursorPos X="16" Y="20"/>
+        <TopLine Value="2"/>
+        <UsageCount Value="9"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="usr\local\share\fpcsrc\rtl\objpas\sysutils\sysutilh.inc"/>
+        <CursorPos X="12" Y="19"/>
+        <TopLine Value="1"/>
+        <UsageCount Value="9"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="usr\local\share\fpcsrc\rtl\objpas\sysutils\diskh.inc"/>
+        <CursorPos X="1" Y="1"/>
+        <TopLine Value="1"/>
+        <UsageCount Value="9"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="usr\local\share\fpcsrc\rtl\objpas\sysutils\osutilsh.inc"/>
+        <CursorPos X="1" Y="37"/>
+        <TopLine Value="19"/>
+        <UsageCount Value="9"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="usr\share\lazarus\lcl\dynhasharray.pp"/>
+        <UnitName Value="DynHashArray"/>
+        <CursorPos X="1" Y="341"/>
+        <TopLine Value="324"/>
+        <UsageCount Value="9"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="\usr\share\lazarus\lcl\dynhasharray.pp"/>
+        <UnitName Value="DynHashArray"/>
+        <CursorPos X="32" Y="341"/>
+        <TopLine Value="322"/>
+        <UsageCount Value="9"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="E:\lazarus\lcl\graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <CursorPos X="1" Y="943"/>
+        <TopLine Value="928"/>
+        <EditorIndex Value="2"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="E:\lazarus\fpcsrc\fcl\image\fpcanvas.pp"/>
+        <UnitName Value="FPCanvas"/>
+        <CursorPos X="31" Y="253"/>
+        <TopLine Value="154"/>
+        <UsageCount Value="11"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="E:\lazarus\lcl\include\bitmapcanvas.inc"/>
+        <CursorPos X="1" Y="1"/>
+        <TopLine Value="98"/>
+        <UsageCount Value="11"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="E:\lazarus\lcl\include\graphic.inc"/>
+        <CursorPos X="1" Y="1"/>
+        <TopLine Value="206"/>
+        <UsageCount Value="11"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="E:\lazarus\lcl\include\canvas.inc"/>
+        <CursorPos X="17" Y="89"/>
+        <TopLine Value="72"/>
+        <EditorIndex Value="3"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="E:\lazarus\lcl\include\winapih.inc"/>
+        <CursorPos X="10" Y="229"/>
+        <TopLine Value="211"/>
+        <EditorIndex Value="5"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="E:\lazarus\fpcsrc\packages\extra\winunits\mmsystem.pp"/>
+        <UnitName Value="mmsystem"/>
+        <CursorPos X="19" Y="2788"/>
+        <TopLine Value="2759"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit34>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="1342" Column="26" TopLine="1325"/>
+      </Position1>
+      <Position2>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="1337" Column="25" TopLine="1327"/>
+      </Position2>
+      <Position3>
+        <Filename Value="E:\lazarus\lcl\graphics.pp"/>
+        <Caret Line="943" Column="15" TopLine="928"/>
+      </Position3>
+      <Position4>
+        <Filename Value="E:\lazarus\lcl\graphics.pp"/>
+        <Caret Line="1683" Column="10" TopLine="1667"/>
+      </Position4>
+      <Position5>
+        <Filename Value="E:\lazarus\lcl\graphics.pp"/>
+        <Caret Line="1678" Column="10" TopLine="1667"/>
+      </Position5>
+      <Position6>
+        <Filename Value="E:\lazarus\lcl\graphics.pp"/>
+        <Caret Line="1688" Column="9" TopLine="1667"/>
+      </Position6>
+      <Position7>
+        <Filename Value="E:\lazarus\lcl\include\canvas.inc"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
+      </Position7>
+      <Position8>
+        <Filename Value="E:\lazarus\lcl\include\canvas.inc"/>
+        <Caret Line="92" Column="7" TopLine="75"/>
+      </Position8>
+      <Position9>
+        <Filename Value="robot.lpr"/>
+        <Caret Line="8" Column="60" TopLine="1"/>
+      </Position9>
+      <Position10>
+        <Filename Value="robot.lpr"/>
+        <Caret Line="10" Column="37" TopLine="1"/>
+      </Position10>
+      <Position11>
+        <Filename Value="robot.lpr"/>
+        <Caret Line="6" Column="3" TopLine="1"/>
+      </Position11>
+      <Position12>
+        <Filename Value="robot.lpr"/>
+        <Caret Line="12" Column="15" TopLine="1"/>
+      </Position12>
+      <Position13>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="1337" Column="25" TopLine="1316"/>
+      </Position13>
+      <Position14>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="1330" Column="38" TopLine="1314"/>
+      </Position14>
+      <Position15>
+        <Filename Value="robot.lpr"/>
+        <Caret Line="17" Column="5" TopLine="1"/>
+      </Position15>
+      <Position16>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="195" Column="52" TopLine="186"/>
+      </Position16>
+      <Position17>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="1778" Column="25" TopLine="1753"/>
+      </Position17>
+      <Position18>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="16" Column="20" TopLine="6"/>
+      </Position18>
+      <Position19>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="11" Column="8" TopLine="1"/>
+      </Position19>
+      <Position20>
+        <Filename Value="E:\lazarus\fpcsrc\packages\extra\winunits\mmsystem.pp"/>
+        <Caret Line="2390" Column="65" TopLine="2369"/>
+      </Position20>
+      <Position21>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="11" Column="8" TopLine="1"/>
+      </Position21>
+      <Position22>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="483" Column="55" TopLine="474"/>
+      </Position22>
+      <Position23>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="1101" Column="51" TopLine="1092"/>
+      </Position23>
+      <Position24>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="1777" Column="33" TopLine="1760"/>
+      </Position24>
+      <Position25>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="88" Column="26" TopLine="87"/>
+      </Position25>
+      <Position26>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="120" Column="53" TopLine="119"/>
+      </Position26>
+      <Position27>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="294" Column="18" TopLine="295"/>
+      </Position27>
+      <Position28>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="121" Column="53" TopLine="120"/>
+      </Position28>
+      <Position29>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="442" Column="1" TopLine="438"/>
+      </Position29>
+      <Position30>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="1536" Column="34" TopLine="1516"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="5"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="robot"/>
+    </Target>
+    <SearchPaths>
+      <SrcPath Value="$(LazarusDir)\lcl\;$(LazarusDir)\lcl\interfaces\$(LCLWidgetType)\"/>
+    </SearchPaths>
+    <CodeGeneration>
+      <Generate Value="Faster"/>
+    </CodeGeneration>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerPath Value="$(CompPath)"/>
+      <CreateMakefileOnBuild Value="True"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="2">
+      <Item1>
+        <Name Value="ECodetoolError"/>
+      </Item1>
+      <Item2>
+        <Name Value="EFOpenError"/>
+      </Item2>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

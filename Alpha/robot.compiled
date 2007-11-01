@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <Compiler Value="/usr/local/bin/fpc" Date="1132070326"/>
+  <Params Value=" -S2cgi -OG1 -gl -WG -vewnhi -l -Fl/usr/X11R6/lib/ -Fl/sw/lib/ -Fu/usr/local/share/lazarus/lcl/units/powerpc-darwin/ -Fu/usr/local/share/lazarus/lcl/units/powerpc-darwin/gtk/ -Fu/usr/local/share/lazarus/packager/units/powerpc-darwin/ -Fu. -o/Users/az/Programmierung/Robot/Lazarus/robot -dLCL -dLCLgtk robot.lpr"/>
+</CONFIG>
