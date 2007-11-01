@@ -123,8 +123,10 @@ type
       Shift: TShiftState; X, Y: Integer);
     procedure GamePanelMouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
+    procedure GamePanelPaint(Sender: TObject);
     procedure KnapsackPanelMouseDown(Sender: TOBject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
+    procedure KnapsackPanelPaint(Sender: TObject);
     procedure mnuEditorLoadClick(Sender: TObject);
     procedure mnuEditorModeClick(Sender: TObject);
     procedure mnuEditorSaveClick(Sender: TObject);
@@ -370,8 +372,6 @@ end;
 
 procedure TMainForm.FormPaint(Sender: TObject);
 begin
-  DrawRoom();
-  DrawKnapsack();
 end;
 
 procedure TMainForm.FormResize(Sender: TObject);
@@ -463,6 +463,11 @@ begin
   GamePanelMouseDown(Sender, Button, Shift, X, Y);
 end;
 
+procedure TMainForm.GamePanelPaint(Sender: TObject);
+begin
+  DrawRoom();
+end;
+
 procedure TMainForm.KnapsackPanelMouseDown(Sender: TOBject;
   Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
 var
@@ -480,6 +485,11 @@ begin
     MyKnapsackSelection := (ky-1)*KNAPSACK_WIDTH + kx;
     DrawKnapsack();
   end;
+end;
+
+procedure TMainForm.KnapsackPanelPaint(Sender: TObject);
+begin
+  DrawKnapsack();
 end;
 
 procedure TMainForm.mnuEditorLoadClick(Sender: TObject);
