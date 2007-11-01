@@ -83,8 +83,8 @@ type
   { TMainForm }
 
   TMainForm = class(TForm)
-    GamePanel: TPanel;
-    KnapsackPanel: TPanel;
+    GamePanel: TImage;
+    KnapsackPanel: TImage;
     InfoPanel: TPanel;
     mnuEditorSave: TMenuItem;
     mnuEditorMode: TMenuItem;
@@ -292,6 +292,8 @@ begin
   InitGame();
 
   // some hacks to make it better
+  KnapsackPanel.Color := clGray;
+  KnapsackPanel.Canvas.FillRect(0,0,KnapsackPanel.Width,KnapsackPanel.Height);
 {  LifeLabel.Font := MainForm.Font;
   ScoresLabel.Font := MainForm.Font;
   DiamondsLabel.Font := MainForm.Font;
@@ -385,6 +387,13 @@ end;
 
 procedure TMainForm.FormResize(Sender: TObject);
 begin
+  // needed to recreate the picture for the new size
+  GamePanel.Picture := nil;
+  // it seems that the picture is not initialized
+  // therefore paint it grey first to avoid strange effects
+  GamePanel.Canvas.Color := clGray;
+  GamePanel.Canvas.FillRect(0,0,GamePanel.Width,GamePanel.Height);
+
   ResetRoomPic();
   ResetPictureResizedCache();
   DrawRoom();

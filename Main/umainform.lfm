@@ -1,13 +1,13 @@
 object MainForm: TMainForm
   Left = 263
-  Height = 512
+  Height = 485
   Top = 140
-  Width = 433
-  HorzScrollBar.Page = 432
-  VertScrollBar.Page = 488
+  Width = 401
+  HorzScrollBar.Page = 400
+  VertScrollBar.Page = 461
   Caption = 'Robot 1.7'
-  ClientHeight = 489
-  ClientWidth = 433
+  ClientHeight = 462
+  ClientWidth = 401
   Color = clWhite
   Font.Height = -11
   Font.Name = 'Bitstream Vera Sans 12'
@@ -23,10 +23,9 @@ object MainForm: TMainForm
   UseDockManager = True
   Visible = True
   object MessageBar: TLabel
-    Left = 1
     Height = 19
-    Top = 470
-    Width = 432
+    Top = 464
+    Width = 400
     Anchors = [akLeft, akRight, akBottom]
     AutoSize = False
     Caption = 'Robot 1.7'
@@ -36,45 +35,34 @@ object MainForm: TMainForm
     ParentColor = False
     Transparent = False
   end
-  object GamePanel: TPanel
-    Height = 360
-    Width = 433
+  object GamePanel: TImage
+    Height = 352
+    Width = 401
     Anchors = [akTop, akLeft, akRight, akBottom]
-    BevelOuter = bvNone
-    Color = clSilver
-    ParentColor = False
-    TabOrder = 0
-    OnClick = GamePanelClick
-    OnMouseDown = GamePanelMouseDown
-    OnMouseMove = GamePanelMouseMove
+    Transparent = False
   end
-  object KnapsackPanel: TPanel
-    Left = 228
-    Height = 101
-    Top = 368
-    Width = 205
+  object KnapsackPanel: TImage
+    Left = 190
+    Height = 99
+    Top = 360
+    Width = 210
     Anchors = [akRight, akBottom]
-    BevelOuter = bvNone
-    Color = clGray
-    ParentColor = False
-    TabOrder = 1
-    OnClick = KnapsackPanelClick
-    OnMouseDown = KnapsackPanelMouseDown
+    Transparent = False
   end
   object InfoPanel: TPanel
     Height = 101
-    Top = 368
-    Width = 214
+    Top = 360
+    Width = 182
     Anchors = [akLeft, akRight, akBottom]
     BevelOuter = bvNone
     ClientHeight = 101
-    ClientWidth = 214
+    ClientWidth = 182
     Color = clAqua
     ParentColor = False
     ParentFont = True
-    TabOrder = 2
+    TabOrder = 0
     object LifeLabel: TLabel
-      Left = 131
+      Left = 99
       Height = 20
       Hint = 'Anzahl verbleibender Leben bis zum Tod (GameOver)'
       Top = 8
@@ -88,7 +76,7 @@ object MainForm: TMainForm
       ShowHint = True
     end
     object ScoresLabel: TLabel
-      Left = 121
+      Left = 89
       Height = 20
       Hint = 'Anzahl Punkte'
       Top = 40
@@ -102,7 +90,7 @@ object MainForm: TMainForm
       ShowHint = True
     end
     object DiamondsLabel: TLabel
-      Left = 86
+      Left = 54
       Height = 20
       Hint = 'Anzahl gesetzter Diamanten (von 3)'
       Top = 71
@@ -211,7 +199,7 @@ object MainForm: TMainForm
     Filter = 'Robot Welten (*.sce)|*.sce|alle Dateien (*)|*'
     FilterIndex = 0
     left = 352
-    top = 344
+    top = 386
   end
   object OpenWorldDialog: TOpenDialog
     Title = 'Welt laden'

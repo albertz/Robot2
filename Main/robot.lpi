@@ -35,7 +35,7 @@
         <CursorPos X="20" Y="17"/>
         <TopLine Value="1"/>
         <EditorIndex Value="1"/>
-        <UsageCount Value="176"/>
+        <UsageCount Value="177"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -44,10 +44,10 @@
         <IsPartOfProject Value="True"/>
         <ResourceFilename Value="umainform.lrs"/>
         <UnitName Value="uMainForm"/>
-        <CursorPos X="43" Y="1262"/>
-        <TopLine Value="1"/>
+        <CursorPos X="23" Y="295"/>
+        <TopLine Value="290"/>
         <EditorIndex Value="0"/>
-        <UsageCount Value="176"/>
+        <UsageCount Value="177"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
@@ -279,7 +279,48 @@
         <UsageCount Value="10"/>
       </Unit36>
     </Units>
-    <JumpHistory Count="0" HistoryIndex="-1"/>
+    <JumpHistory Count="10" HistoryIndex="9">
+      <Position1>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="18" Column="37" TopLine="1"/>
+      </Position1>
+      <Position2>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="85" Column="27" TopLine="54"/>
+      </Position2>
+      <Position3>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="1370" Column="32" TopLine="1362"/>
+      </Position3>
+      <Position4>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="1664" Column="1" TopLine="1652"/>
+      </Position4>
+      <Position5>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="292" Column="3" TopLine="310"/>
+      </Position5>
+      <Position6>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="1790" Column="31" TopLine="1167"/>
+      </Position6>
+      <Position7>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="390" Column="1" TopLine="386"/>
+      </Position7>
+      <Position8>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="86" Column="23" TopLine="86"/>
+      </Position8>
+      <Position9>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="99" Column="73" TopLine="86"/>
+      </Position9>
+      <Position10>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="394" Column="1" TopLine="376"/>
+      </Position10>
+    </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>
     <Version Value="5"/>
