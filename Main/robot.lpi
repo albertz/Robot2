@@ -44,8 +44,8 @@
         <IsPartOfProject Value="True"/>
         <ResourceFilename Value="umainform.lrs"/>
         <UnitName Value="uMainForm"/>
-        <CursorPos X="48" Y="1676"/>
-        <TopLine Value="1694"/>
+        <CursorPos X="43" Y="1262"/>
+        <TopLine Value="1"/>
         <EditorIndex Value="0"/>
         <UsageCount Value="176"/>
         <Loaded Value="True"/>
