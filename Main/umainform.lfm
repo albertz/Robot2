@@ -2,12 +2,12 @@ object MainForm: TMainForm
   Left = 263
   Height = 512
   Top = 140
-  Width = 388
-  HorzScrollBar.Page = 387
+  Width = 433
+  HorzScrollBar.Page = 432
   VertScrollBar.Page = 488
   Caption = 'Robot 1.7'
   ClientHeight = 489
-  ClientWidth = 388
+  ClientWidth = 433
   Color = clWhite
   Font.Height = -11
   Font.Name = 'Bitstream Vera Sans 12'
@@ -25,8 +25,8 @@ object MainForm: TMainForm
   object MessageBar: TLabel
     Left = 1
     Height = 19
-    Top = 444
-    Width = 387
+    Top = 470
+    Width = 432
     Anchors = [akLeft, akRight, akBottom]
     AutoSize = False
     Caption = 'Robot 1.7'
@@ -37,8 +37,8 @@ object MainForm: TMainForm
     Transparent = False
   end
   object GamePanel: TPanel
-    Height = 332
-    Width = 388
+    Height = 360
+    Width = 433
     Anchors = [akTop, akLeft, akRight, akBottom]
     BevelOuter = bvNone
     Color = clSilver
@@ -49,9 +49,9 @@ object MainForm: TMainForm
     OnMouseMove = GamePanelMouseMove
   end
   object KnapsackPanel: TPanel
-    Left = 183
+    Left = 228
     Height = 101
-    Top = 337
+    Top = 368
     Width = 205
     Anchors = [akRight, akBottom]
     BevelOuter = bvNone
@@ -63,18 +63,18 @@ object MainForm: TMainForm
   end
   object InfoPanel: TPanel
     Height = 101
-    Top = 337
-    Width = 169
+    Top = 368
+    Width = 214
     Anchors = [akLeft, akRight, akBottom]
     BevelOuter = bvNone
     ClientHeight = 101
-    ClientWidth = 169
+    ClientWidth = 214
     Color = clAqua
     ParentColor = False
     ParentFont = True
     TabOrder = 2
     object LifeLabel: TLabel
-      Left = 86
+      Left = 131
       Height = 20
       Hint = 'Anzahl verbleibender Leben bis zum Tod (GameOver)'
       Top = 8
@@ -88,7 +88,7 @@ object MainForm: TMainForm
       ShowHint = True
     end
     object ScoresLabel: TLabel
-      Left = 76
+      Left = 121
       Height = 20
       Hint = 'Anzahl Punkte'
       Top = 40
@@ -102,7 +102,7 @@ object MainForm: TMainForm
       ShowHint = True
     end
     object DiamondsLabel: TLabel
-      Left = 41
+      Left = 86
       Height = 20
       Hint = 'Anzahl gesetzter Diamanten (von 3)'
       Top = 71
@@ -117,7 +117,7 @@ object MainForm: TMainForm
     end
   end
   object MainMenu: TMainMenu
-    left = 377
+    left = 361
     top = 176
     object mnuGame: TMenuItem
       Caption = 'Spiel'
@@ -185,7 +185,7 @@ object MainForm: TMainForm
   object ComputerPlayer: TTimer
     Interval = 500
     OnTimer = ComputerPlayerTimer
-    left = 377
+    left = 361
     top = 216
   end
   object OpenGameDialog: TOpenDialog

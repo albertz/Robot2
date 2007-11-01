@@ -11,7 +11,7 @@ uses
   ,MMSystem
 {$ENDIF}
   ;
-  
+
 const
   PICTURE_SIZE = // picture cache size
 {$IFDEF win32}
@@ -24,7 +24,7 @@ const
   PLAYER_PICS: array[1..3] of string
                = ('figur.bmp', 'robot*.bmp', 'konig.bmp');
   ERROR_PIC = 'error.bmp'; // used for error-displaying
-  
+
   WORLD_WIDTH = 5; // room count
   WORLD_HEIGHT = 4;
   ROOM_WIDTH = 20; // place count in a room
@@ -32,7 +32,7 @@ const
   KNAPSACK_WIDTH = 10; // place count in the knapsack
   KNAPSACK_HEIGHT = 5;
   KNAPSACK_MAX = 27; // compatibility with Robot1 (9*3)
-  
+
   COMPUTERCONTROL_INTERVAL = 750; // timer-interval for computer player control
 
 type
@@ -49,7 +49,7 @@ type
   TPlaceAbsNum = 1..(ROOM_WIDTH*ROOM_HEIGHT); // abs room-index
   TRoomAbsNum = 1..(WORLD_WIDTH*WORLD_HEIGHT); // abs place-index
   TKnapsackAbsNum = 1..(KNAPSACK_WIDTH*KNAPSACK_HEIGHT); // abs knapsack-index
-  
+
   TPlace = record
     PicIndex: Integer; // index of TPictureCache
   end;
@@ -148,7 +148,7 @@ type
     procedure KillRobots(); // kill all robots in act room
     procedure UseKnapsackSelection();
     procedure ControlComputerPlayers(); // make 'intelligent' movements of all robots and the king
-    
+
     // background stuff
     procedure InitGame();
     procedure RestartGame();
@@ -199,7 +199,7 @@ type
     procedure ChangeFocus();
     procedure SetPauseState(s: boolean);
     Procedure CopyRect(DstCanvas: TCanvas; const Dest: TRect; SrcCanvas: TCanvas; const Source: TRect);
-                       
+
     MyWorld: TWorld; // the world
     MyWorldPlayers: TWorldPlayers; // all players
     MyRoomNum: TRoomNum; // selected room of my world
@@ -290,7 +290,7 @@ end;
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
   InitGame();
-  
+
   // some hacks to make it better
 {  LifeLabel.Font := MainForm.Font;
   ScoresLabel.Font := MainForm.Font;
@@ -317,7 +317,7 @@ begin
     SetPauseState(not MyPauseState)
   else
     SetPauseState(false);
-    
+
   if not (ssCtrl in Shift) then // TODO: change to: nothing in Shift
   case Key of
   37: // left
@@ -418,9 +418,9 @@ begin
         if Button = mbLeft then
         begin
           // TODO: own procedure for setting a place (or should SetPlace be modified?)
-        
+
           SetPlace(PlaceNum(gx,gy), MyEditorKnapsack[MyKnapsackSelection]);
-          
+
           // look for players
           for i := Low(PLAYER_PICS) to High(PLAYER_PICS) do
           begin
@@ -497,10 +497,10 @@ begin
 
   MyEditorMode := not MyEditorMode;
   mnuEditorMode.Checked := MyEditorMode;
-  
+
   mnuEditorSave.Enabled := MyEditorMode;
   mnuEditorLoad.Enabled := MyEditorMode;
-  
+
   if MyEditorMode = true then
   begin
     // load everything into MyEditorKnapsack
@@ -569,28 +569,28 @@ begin
               'Updates und weitere Informationen zu mir:' + LineEnding +
               'www.az2000.de/projects/robot2' + LineEnding +
               LineEnding +
-              'Für weitere Informationen besucht meine Homepage: www.az2000.de'
+              'FÃ¼r weitere Informationen besucht meine Homepage: www.az2000.de'
               );
 end;
 
 procedure TMainForm.mnuHelpControlClick(Sender: TObject);
 begin
   ShowMessage(
-              'Mit den Pfeiltasten gibst du deinem Körper die Anweisung, ' +
+              'Mit den Pfeiltasten gibst du deinem KÃ¶rper die Anweisung, ' +
               'in die entsprechende Richtung zu gehen. Dieser sammelt dabei ' +
-              'automatisch aufsammelbare Gegenstände auf (vorausgesetzt, es ' +
-              'ist genügend Platz im Rucksack). Mit Leertaste oder Tab ' +
-              'lässt sich eine Auswahl im Rucksack treffen und mit Enter ' +
-              'wird der entsprechend ausgewählte Gegenstand benutzt. ' +
+              'automatisch aufsammelbare GegenstÃ¤nde auf (vorausgesetzt, es ' +
+              'ist genÃ¼gend Platz im Rucksack). Mit Leertaste oder Tab ' +
+              'lÃ¤sst sich eine Auswahl im Rucksack treffen und mit Enter ' +
+              'wird der entsprechend ausgewÃ¤hlte Gegenstand benutzt. ' +
               'Mit P gelangst du in den Pause-Modus, in dem die Zeit ' +
               'stillsteht. Wenn du das Verlangen hast, in eine andere Welt ' +
               'abzutauchen, empfiehlt es sich, den Status dieser Robot-Welt ' +
               'zu speichern, indem du ein eingesammeltes Speicherelement ' +
-              '(Uhr-Symbol) benutzt, um später an dieser Stelle fortfahren ' +
-              'zu können.' + LineEnding +
+              '(Uhr-Symbol) benutzt, um spÃ¤ter an dieser Stelle fortfahren ' +
+              'zu kÃ¶nnen.' + LineEnding +
               LineEnding +
               'Den Rest kriegst du schon selbst raus. In deinen anderen ' +
-              'Welten ist das schließlich auch nicht anders.'
+              'Welten ist das schlieÃŸlich auch nicht anders.'
               );
 end;
 
@@ -598,22 +598,22 @@ procedure TMainForm.mnuHelpDescriptionClick(Sender: TObject);
 begin
   ShowMessage(
               'In diesem Spiel geht es darum, das Spiel durchzuspielen und ' +
-              'am Ende zum bösen König zu gelangen, der um dich daran zu ' +
+              'am Ende zum bÃ¶sen KÃ¶nig zu gelangen, der um dich daran zu ' +
               'hindern, seine nervigen Roboter ausgesandt hat.' + LineEnding +
               LineEnding +
-              'Der König ist normalerweise unbesiegbar, gäbe es nicht die 3 ' +
+              'Der KÃ¶nig ist normalerweise unbesiegbar, gÃ¤be es nicht die 3 ' +
               'magischen Diamantenstellen, die nachdem die passenden ' +
               'Diamanten eingesetzt wurden, den Bann der Unbesiegbarkeit ' +
               'brechen und ihn verwundbar machen. Dies war der Preis des ' +
-              'Königs für seine Unbesiegbarkeit. Um es dir schwer zu machen, ' +
-              'wurden diese Diamanten allerdings in den Räumen versträut. ' +
-              'Teilweise hat er nachträglich auch manche Wege zugemauert, ' +
+              'KÃ¶nigs fÃ¼r seine Unbesiegbarkeit. Um es dir schwer zu machen, ' +
+              'wurden diese Diamanten allerdings in den RÃ¤umen verstrÃ¤ut. ' +
+              'Teilweise hat er nachtrÃ¤glich auch manche Wege zugemauert, ' +
               'war dabei allerdings sparsam im Material, so dass sich diese ' +
-              'Wände mit aggresiver Ätzflüssigkeit weg machen lassen.' +
-              'Für die vielen Türen lassen sich überall in den Räumen ' +
-              'Schlüssel finden, die den Zugang ermöglichen.' + LineEnding +
+              'WÃ¤nde mit aggresiver Ã„tzflÃ¼ssigkeit weg machen lassen.' +
+              'FÃ¼r die vielen TÃ¼ren lassen sich Ã¼berall in den RÃ¤umen ' +
+              'SchlÃ¼ssel finden, die den Zugang ermÃ¶glichen.' + LineEnding +
               LineEnding +
-              'Mit der Devise "Es gibt immer einen Weg" lässt sich der Weg ' +
+              'Mit der Devise "Es gibt immer einen Weg" lÃ¤sst sich der Weg ' +
               'zum Sieg bahnen!'
               );
 end;
@@ -672,7 +672,7 @@ begin
       end;
     end;
   end;
-  
+
   MoveToRoom := true;
   case dir of
   mdLeft:
@@ -695,7 +695,7 @@ begin
       ComputerPlayer.Interval := COMPUTERCONTROL_INTERVAL div 2
     else
       ComputerPlayer.Interval := COMPUTERCONTROL_INTERVAL;
-      
+
     DrawRoom();
   end;
 end;
@@ -780,14 +780,14 @@ begin
       newpos.Y := oldpos.Y + 1;
     end;
   end;
-  
+
   // room change? => ignore everything else
   if oldroom <> GetAbs(MyRoomNum) then
   begin
     DrawRoom();
     exit;
   end;
-  
+
   if (GetPlacePicName(newpos) = 'wand1.bmp') // normal wall
   or (GetPlacePicName(newpos) = 'wand2.bmp') // hard wall
   then
@@ -806,13 +806,13 @@ begin
   begin
     ShowMsg([
              'Ich muss hier den richtigen Diamanten benutzen.',
-             'Hierfür braucht man die Diamanten.',
+             'HierfÃ¼r braucht man die Diamanten.',
              'Der Diamantenstellplatz...'
              ]);
     PlaySound('fl.wav');
     exit;
   end;
-  
+
   if GetPlacePicName(newpos) = 'wand3.bmp' // electric-wall
   then
   begin
@@ -821,13 +821,13 @@ begin
              'Bzzzz',
              'Deshalb solltet ihr nie in Steckdosen fassen.',
              'Das tut weh!',
-             'Da sollte ich nächstes Mal nicht mehr reinlaufen.'
+             'Da sollte ich nÃ¤chstes Mal nicht mehr reinlaufen.'
              ]);
     PlaySound('strom.wav');
     RemoveLife();
     ResetPlace(newpos);
   end;
-  
+
   if IsWild(GetPlacePicName(newpos), 'tuer*.bmp', false) // dor
   then
   begin
@@ -835,37 +835,37 @@ begin
     if not IsInKnapsack(AnsiReplaceStr(GetPlacePicName(newpos), 'tuer', 'schl')) then
     begin
       ShowMsg([
-               'Mir fehlt der Schlüssel.',
-               'Der richtige Schlüssel fehlt.',
-               'Den Schlüssel hierfür habe ich noch nicht.',
-               'Ich brauche den Schlüssel.'
+               'Mir fehlt der SchlÃ¼ssel.',
+               'Der richtige SchlÃ¼ssel fehlt.',
+               'Den SchlÃ¼ssel hierfÃ¼r habe ich noch nicht.',
+               'Ich brauche den SchlÃ¼ssel.'
                ]);
       exit;
     end;
   end;
-  
+
   if IsWild(GetPlacePicName(newpos), 'robot*.bmp', false) // robot
   then
   begin
     ShowMsg([
              'Au, der tut mir weh!',
-             'Der ist böse!',
+             'Der ist bÃ¶se!',
              'Sehr nervig diese Roboter.',
-             'Ich sollte mich demnächst in Acht nehmen.',
-             'Man bin ich blöd, dem Roboter direkt in die Arme gelaufen.'
+             'Ich sollte mich demnÃ¤chst in Acht nehmen.',
+             'Man bin ich blÃ¶d, dem Roboter direkt in die Arme gelaufen.'
              ]);
     PlaySound('robot.bmp');
     RemoveLife();
     RemovePlayer(GetAbs(MyRoomNum), newpos);
   end;
-  
+
   if GetPlacePicName(newpos) = 'konig.bmp' // king
   then
   begin
     ShowMsg([
-             'Man bin ich blöd, dem König direkt in die Arme gelaufen.',
-             'Der ist stärker als ich.',
-             'Nächstes Mal besser aufpassen.',
+             'Man bin ich blÃ¶d, dem KÃ¶nig direkt in die Arme gelaufen.',
+             'Der ist stÃ¤rker als ich.',
+             'NÃ¤chstes Mal besser aufpassen.',
              'Da muss ich mir etwas besseres ausdenken.',
              'Ich jage ihn wohl besser in einen Elektrozaun.'
              ]);
@@ -880,24 +880,24 @@ begin
   then
   begin
     ShowMsg([
-             'Ah, schön.',
+             'Ah, schÃ¶n.',
              'Nett!',
              'Wie das funkelt.',
              'Das ist bestimmt viel wert.',
              'Das sieht schick aus!',
              'Oh wie toll!',
              'Guck mal, was ich tolles gefunden habe!',
-             'Dafür kriegt man bestimmt viel Geld.',
+             'DafÃ¼r kriegt man bestimmt viel Geld.',
              'Ich will mehr!',
              'Von wem das wohl stammt?',
-             'Ob ich das zum Fundbüro bringen sollte?',
-             'Ich bin ein Glückspilz.'
+             'Ob ich das zum FundbÃ¼ro bringen sollte?',
+             'Ich bin ein GlÃ¼ckspilz.'
              ]);
     PlaySound('punkt.wav');
     AddScores(1000);
     ResetPlace(newpos);
   end;
-  
+
   if GetPlacePicName(newpos) = 'kill.bmp' // robot killer
   then
   begin
@@ -924,7 +924,7 @@ begin
     begin
       ShowMsg([
                'Damit kann man sicher tolle Sachen machen.',
-               'Das muss ich mir später mal genauer ansehen.',
+               'Das muss ich mir spÃ¤ter mal genauer ansehen.',
                'Ich nehm das mal mit.'
                ]);
       AddScores(500);
@@ -933,7 +933,7 @@ begin
     else
     begin
       ShowMsg([
-               'Wenn mein Rucksack nicht voll wäre, hätte ich das mitgenommen.',
+               'Wenn mein Rucksack nicht voll wÃ¤re, hÃ¤tte ich das mitgenommen.',
                'Leider ist mein Rucksack voll.',
                'Ich glaube, ich sollte etwas Platz in meinem Rucksack machen.',
                'Besser ist wohl, ich mache Platz im Rucksack.'
@@ -959,15 +959,15 @@ begin
     else
     begin
       ShowMsg([
-               'Hierfür sollte ich auf jeden Fall Platz im Rucksack machen!',
+               'HierfÃ¼r sollte ich auf jeden Fall Platz im Rucksack machen!',
                'Der Platz im Rucksack ist es wert!',
-               'Mir fehlt Platz für den Diamanten.'
+               'Mir fehlt Platz fÃ¼r den Diamanten.'
                ]);
     end;
   end;
 
   MyWorldPlayers[GetAbs(MyRoomNum)][f].Pos := newpos;
-  
+
   DrawRoom();
 end;
 
@@ -996,11 +996,11 @@ var
   i: Integer;
 begin
   s := GetPictureName(MyKnapsack[MyKnapsackSelection].PicIndex);
-  
+
   if s = BACKGROUND_PIC then
   begin
     ShowMsg([
-             'Ich muss erst etwas auswählen.',
+             'Ich muss erst etwas auswÃ¤hlen.',
              'Was soll ich benutzen?',
              'Ich kann nicht zaubern.'
              ]);
@@ -1009,14 +1009,14 @@ begin
   if IsWild(s, 'schl*.bmp', false) then
   begin
     ShowMsg([
-             'Den brauche ich, um durch Türen gehen zu können.',
+             'Den brauche ich, um durch TÃ¼ren gehen zu kÃ¶nnen.',
              'Den muss ich nicht direkt benutzen.',
-             'Ich kann damit nichts Besonderes machen - außer durch Türen zu gehen.',
+             'Ich kann damit nichts Besonderes machen - auÃŸer durch TÃ¼ren zu gehen.',
              'Das geht gerade nicht.'
              ]);
     exit; // cannot use key
   end;
-  
+
   f := GetMainPlayerIndex();
   if f < 0 then
   begin
@@ -1027,7 +1027,7 @@ begin
     exit; // do only things if player is in act room
   end;
   pos := MyWorldPlayers[GetAbs(MyRoomNum)][f].Pos;
-  
+
   if s = 'leben.bmp' then // TODO: lebenselexier?
   begin
     AddLife();
@@ -1035,10 +1035,10 @@ begin
     ShowMsg([
              'Ah, das tat gut.',
              'Lecker!',
-             'Man fühlt sich fast wie neugeboren.'
+             'Man fÃ¼hlt sich fast wie neugeboren.'
              ]);
   end;
-  
+
   if IsWild(s, 'diamant*.bmp', false) then // diamond
   begin
     tmp := AnsiReplaceStr(s, 'diamant', 'code');
@@ -1069,7 +1069,7 @@ begin
       ShowMsg([
                'Den Diamanten kann ich nur an der richtigen Stelle einsetzen.',
                'Wo ist die Diamantenstelle?',
-               'Ich benötige eine Diamantenstelle',
+               'Ich benÃ¶tige eine Diamantenstelle',
                'Was soll ich damit hier tun?'
                ]);
       exit;
@@ -1085,7 +1085,7 @@ begin
       DiamondNr := StrToInt(AnsiReplaceStr(AnsiReplaceStr(s, 'diamant', ''), '.bmp', ''));
     DrawInfo();
   end;
-  
+
   if s = 'speicher.bmp' then // save-item
   begin
     // have to reset it first, because else, the saved game contains also this save-element
@@ -1096,7 +1096,7 @@ begin
       exit;
     end;
   end;
-  
+
   if s = 'aetz.bmp' then // TODO: aetz? (english)
   begin
     did := false;
@@ -1120,29 +1120,29 @@ begin
       did := true;
       SetPlacePicName(PlaceNum(pos.X,pos.Y+1), BACKGROUND_PIC);
     end;
-    
+
     if not did then
     begin
       ShowMsg([
-               'Ich kann hier nichts wegätzen.',
+               'Ich kann hier nichts wegÃ¤tzen.',
                'Das geht hier nicht.',
                'Was soll ich damit hier tun?',
                'Ist alles schon weg hier.',
                'Hallo?',
-               'Wäre bloß eine Verschwendung hier'
+               'WÃ¤re bloÃŸ eine Verschwendung hier'
                ]);
       exit;
     end;
 
     ShowMsg([
              'Das geht weg wie nix.',
-             'Sehr umweltschädlich!',
+             'Sehr umweltschÃ¤dlich!',
              'Trickreich...',
              'Ha, bin ich geschickt :)'
              ]);
     DrawRoom();
   end;
-  
+
   PlaySound('einsatz.wav');
   MyKnapsack[MyKnapsackSelection].PicIndex := GetPictureCacheIndex(BACKGROUND_PIC);
 
@@ -1167,7 +1167,7 @@ begin
       break;
     end
   end;
-  
+
   if f <> 0 then
   begin
     // TODO: own function SetKnapsackSelection
@@ -1186,12 +1186,12 @@ var
 begin
   if MyPauseState = true then exit; // don't do anything while pausing
   if MyEditorMode = true then exit; // don't do anything while editing
-  
+
   f := GetMainPlayerIndex();
   if f < 0 then exit; // don't do anything if the player is not here
-  
+
   ppos := MyWorldPlayers[GetAbs(MyRoomNum)][f].Pos;
-  
+
   for i := Low(MyWorldPlayers[GetAbs(MyRoomNum)]) to High(MyWorldPlayers[GetAbs(MyRoomNum)]) do
   begin
     s := GetPictureName(MyWorldPlayers[GetAbs(MyRoomNum)][i].PicIndex);
@@ -1213,7 +1213,7 @@ begin
         else
           newpos.Y := newpos.Y - 1;
       end;
-      
+
       if (newpos.X = ppos.X)
       and (newpos.Y = ppos.Y) then
       begin
@@ -1222,7 +1222,7 @@ begin
           PlaySound('konig.wav');
           ShowMsg([
                    'Vor dem sollte ich aufpassen.',
-                   'Der König hat mich bekommen!',
+                   'Der KÃ¶nig hat mich bekommen!',
                    'Ich muss ihn irgendwie austricksen.'
                    ]);
           MyWorldPlayers[GetAbs(MyRoomNum)][f].Pos := PlaceNum(2,2);
@@ -1231,7 +1231,7 @@ begin
         begin
           PlaySound('robot.wav');
           ShowMsg([
-                   'Ein Roboter hat mich erwischt. Nächstes Mal besser wegrennen.',
+                   'Ein Roboter hat mich erwischt. NÃ¤chstes Mal besser wegrennen.',
                    'Das war ungeschickt.',
                    'Der hat mich erwischt.',
                    'Sehr nervig diese Teile!'
@@ -1242,7 +1242,7 @@ begin
         DrawRoom();
         exit;
       end;
-      
+
       if GetPlacePicName(newpos) = 'wand3.bmp' then
       begin
         if s = 'konig.bmp' then
@@ -1252,7 +1252,7 @@ begin
           begin
             RemovePlayer(GetAbs(MyRoomNum), i);
             ShowMsg([
-                     'Hurra, der KÃ¶nig ist tot!',
+                     'Hurra, der KÃƒÂ¶nig ist tot!',
                      'Das Spiel ist gewonnen!',
                      'Toll, ich habe es geschafft!'
                      ]);
@@ -1263,13 +1263,13 @@ begin
                         'besiegt.' + LineEnding +
                         LineEnding +
                         'Und was sagt uns das? Es gibt immer einen Weg! ' + LineEnding +
-                        '(Über den Sinn dieses Spieles inklusive seinem Ziel ' +
-                        'lässt sich jetzt streiten, aber du kannst von dir ' +
+                        '(Ãœber den Sinn dieses Spieles inklusive seinem Ziel ' +
+                        'lÃ¤sst sich jetzt streiten, aber du kannst von dir ' +
                         'behaupten, das Ziel trotzdem erreicht zu haben.)' + LineEnding +
                         LineEnding +
                         'Was kommt nun?' + LineEnding +
-                        'Tja, das Leben geht weiter; was als nächstes kommt, ' +
-                        'bleibt rein dir überlassen.' + LineEnding +
+                        'Tja, das Leben geht weiter; was als nÃ¤chstes kommt, ' +
+                        'bleibt rein dir Ã¼berlassen.' + LineEnding +
                         'Vielleicht tauchst du jetzt mal wieder in deine ' +
                         'von dir als normal angesehene Welt ab, um dort andere ' +
                         'von dir selbst gestellten Ziele zu erreichen.' + LineEnding +
@@ -1301,7 +1301,7 @@ begin
         ControlComputerPlayers(); // index numbering changed
         exit;
       end;
-      
+
       if GetPlace(newpos).PicIndex = GetPictureCacheIndex(BACKGROUND_PIC) then
       begin
         if s = 'konig.bmp' then
@@ -1357,7 +1357,7 @@ begin
   MySoundState := false;
   ResetRoomPic();
   ResetKnapsackPic();
-  
+
   RestartGame();
 end;
 
@@ -1376,10 +1376,10 @@ begin
   DrawInfo();
 
   SetFocus(fcRoom);
-  
+
   DrawRoom();
   DrawKnapsack();
-  
+
   PlaySound('newgame.wav');
   SetPauseState(true);
 end;
@@ -1415,7 +1415,7 @@ begin
   begin
     MyRoomPic.Room[i].PicIndex := -1;
   end;
-  
+
   w := GamePanel.ClientWidth div ROOM_WIDTH;
   h := GamePanel.ClientHeight div ROOM_HEIGHT;
   if MyRoomPic.Picture <> nil then MyRoomPic.Picture.Free();
@@ -1477,7 +1477,7 @@ begin
       //WriteLn('found player to view: ' + IntToStr(GetPlace.PicIndex));
     end;
   end;
-  
+
   // check for range errors
   if (GetPlace.PicIndex < Low(MyPictureCache))
   or (GetPlace.PicIndex > High(MyPictureCache)) then
@@ -1572,7 +1572,7 @@ begin
       exit;
     end;
   end;
-  
+
   IsPlayerInRoom := false;
 end;
 
@@ -1646,7 +1646,7 @@ begin
                  );
         MyPictureCache[GetPlace(GetNumP(i)).PicIndex].ResizedPicture := pic;
       end;
-      
+
       MyRoomPic.Picture.Canvas.Draw(
                                     (GetNumP(i).X-1)*w,
                                     (GetNumP(i).Y-1)*h,
@@ -1737,7 +1737,7 @@ begin
       end;
     end;
   end;
-  
+
   // draw the hole area to screen (to the KnapsackPanel)
   w := KnapsackPanel.ClientWidth div KNAPSACK_WIDTH;
   h := KnapsackPanel.ClientHeight div KNAPSACK_HEIGHT;
@@ -1747,7 +1747,7 @@ begin
            MyKnapsackPic.Picture.Canvas,
            Rect(0,0,MyKnapsackPic.Picture.Width,MyKnapsackPic.Picture.Height)
            );
-                                
+
   // draw selection
   x := (MyKnapsackSelection-1) mod KNAPSACK_WIDTH;
   y := (MyKnapsackSelection-1) div KNAPSACK_WIDTH;
@@ -1756,7 +1756,7 @@ begin
   KnapsackPanel.Canvas.Line(x*w,y*h,(x+1)*w-1,y*h);
   KnapsackPanel.Canvas.Line((x+1)*w-1,y*h,(x+1)*w-1,(y+1)*h-1);
   KnapsackPanel.Canvas.Line(x*w,(y+1)*h-1,(x+1)*w-1,(y+1)*h-1);
-  
+
   // draw focus
   // TODO
 end;
@@ -1785,7 +1785,7 @@ procedure TMainForm.ShowMsg(msg: string);
     MessageBar.Font.Color := TColor((1-c) + 256*(1-c) + 256*256*(1-c));
     //FPColorToTColor(FPColor(255-c,255-c,255-c));
   end;
-  
+
 var
   c: Integer;
 begin
@@ -1797,7 +1797,7 @@ begin
     SetEffectState(c);
     Delay(10);
   until c >= 255;}
-  
+
   //MessageBar.Color := clBlack;
   //Delay(50);
   //MessageBar.Color := clWhite;
@@ -1817,7 +1817,7 @@ procedure TMainForm.ShowMsg(msgs: array of string);
 begin
   ShowMsg(RandomFrom(msgs));
 end;
-                           
+
 function TMainForm.GetPictureName(index: Integer): string; // returns filename
 begin
   // check for range errors
@@ -1868,7 +1868,7 @@ begin
       exit;
     end;
   end;
-  
+
   // resize it
   tmp2 := TBitmap.Create();
   tmp2.Width := PICTURE_SIZE;
@@ -1954,7 +1954,7 @@ begin
       exit;
     end;
   end;
-  
+
   AddToKnapsack := false;
 end;
 
@@ -1976,7 +1976,7 @@ begin
       exit;
     end;
   end;
-  
+
   IsInKnapsack := false;
 end;
 
@@ -2036,8 +2036,8 @@ begin
              'Das letzte Leben verabschiedet sich.'
              ]);
     ShowMessage(
-                'Ich bin sicher, in anderen Welten wäre jetzt wirklich Ende, ' +
-                'geschweige dessen, dass du überhaupt mehrere Leben hast!'
+                'Ich bin sicher, in anderen Welten wÃ¤re jetzt wirklich Ende, ' +
+                'geschweige dessen, dass du Ã¼berhaupt mehrere Leben hast!'
                 );
     RemoveLife := false;
   end
@@ -2073,7 +2073,7 @@ begin
     WriteLn('ERROR: PlaySound: ' + fname + ' not found');
     exit;
   end;
-  
+
 {$IFDEF win32}
   // TODO: cache sounds
   sndPlaySound(PChar(fname), SND_NODEFAULT Or SND_ASYNC);
@@ -2211,7 +2211,7 @@ begin
       tmp := Trim(tmp);
       roomnr := StrToInt(tmp);
     end;
-    
+
     // name
     if not EOF(f) then
     begin
@@ -2219,7 +2219,7 @@ begin
       tmp := Trim(tmp);
       // TODO: handle name in some way
     end;
-    
+
     // scores
     if not EOF(f) then
     begin
@@ -2235,7 +2235,7 @@ begin
       tmp := Trim(tmp);
       MyLife := Abs(StrToInt(tmp));
     end;
-    
+
     // diamond states
     SetLength(MyDiamonds, 0);
     for i := 1 to 3 do
@@ -2262,11 +2262,11 @@ begin
       tmp := Trim(tmp);
       placeunder := LowerCase(tmp);
     end;
-    
+
     // has to be: ':RUCK' (check not needed)
     if not EOF(f) then
       ReadLn(f, tmp);
-      
+
     // knapsack
     // don't use KNAPSACK_WIDTH*KNAPSACK_HEIGHT here for compatibility with Robot1
     // TODO: dynamically loading till beginning of rooms (":RAUM*")
@@ -2318,7 +2318,7 @@ begin
   finally
     CloseFile(f);
   end;
-  
+
   MoveToRoom(GetNumR(roomnr));
   DrawInfo();
   DrawKnapsack();
@@ -2368,7 +2368,7 @@ begin
         placeunder := GetPictureName(MyWorld[roomnum][GetAbs(MyWorldPlayers[roomnum][i].Pos)].PicIndex);
     if placeunder = BACKGROUND_PIC then
       placeunder := '';
-    
+
     WriteLn(f, placeunder);
 
     WriteLn(f, ':RUCK');
@@ -2381,14 +2381,14 @@ begin
       WriteLn(f, tmp);
     end;
     WriteLn(f, 'ENDE');
-    
+
     for roomnum := 1 to WORLD_WIDTH*WORLD_HEIGHT do
     begin
       WriteLn(f, ':RAUM' + IntToStr(roomnum));
       for placenum := 1 to ROOM_WIDTH*ROOM_HEIGHT do
         WriteLn(f, GetPictureName(GetPlace(roomnum, GetNumP(placenum)).PicIndex));
     end;
-    
+
   finally
     CloseFile(f);
   end;

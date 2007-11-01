@@ -8,7 +8,7 @@
       <IconPath Value="./"/>
       <TargetFileExt Value=""/>
       <Title Value="Robot"/>
-      <ActiveEditorIndexAtStart Value="1"/>
+      <ActiveEditorIndexAtStart Value="0"/>
     </General>
     <PublishOptions>
       <Version Value="2"/>
@@ -32,7 +32,7 @@
         <Filename Value="robot.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="robot"/>
-        <CursorPos X="23" Y="12"/>
+        <CursorPos X="20" Y="17"/>
         <TopLine Value="1"/>
         <EditorIndex Value="1"/>
         <UsageCount Value="176"/>
@@ -45,7 +45,7 @@
         <ResourceFilename Value="umainform.lrs"/>
         <UnitName Value="uMainForm"/>
         <CursorPos X="48" Y="1676"/>
-        <TopLine Value="1667"/>
+        <TopLine Value="1694"/>
         <EditorIndex Value="0"/>
         <UsageCount Value="176"/>
         <Loaded Value="True"/>
@@ -279,12 +279,7 @@
         <UsageCount Value="10"/>
       </Unit36>
     </Units>
-    <JumpHistory Count="1" HistoryIndex="0">
-      <Position1>
-        <Filename Value="robot.lpr"/>
-        <Caret Line="6" Column="3" TopLine="1"/>
-      </Position1>
-    </JumpHistory>
+    <JumpHistory Count="0" HistoryIndex="-1"/>
   </ProjectOptions>
   <CompilerOptions>
     <Version Value="5"/>
