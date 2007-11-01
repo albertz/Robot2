@@ -44,8 +44,8 @@
         <IsPartOfProject Value="True"/>
         <ResourceFilename Value="umainform.lrs"/>
         <UnitName Value="uMainForm"/>
-        <CursorPos X="23" Y="295"/>
-        <TopLine Value="290"/>
+        <CursorPos X="11" Y="385"/>
+        <TopLine Value="377"/>
         <EditorIndex Value="0"/>
         <UsageCount Value="177"/>
         <Loaded Value="True"/>
@@ -279,7 +279,7 @@
         <UsageCount Value="10"/>
       </Unit36>
     </Units>
-    <JumpHistory Count="10" HistoryIndex="9">
+    <JumpHistory Count="18" HistoryIndex="17">
       <Position1>
         <Filename Value="umainform.pas"/>
         <Caret Line="18" Column="37" TopLine="1"/>
@@ -320,6 +320,38 @@
         <Filename Value="umainform.pas"/>
         <Caret Line="394" Column="1" TopLine="376"/>
       </Position10>
+      <Position11>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="121" Column="41" TopLine="120"/>
+      </Position11>
+      <Position12>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="409" Column="34" TopLine="393"/>
+      </Position12>
+      <Position13>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="122" Column="1" TopLine="117"/>
+      </Position13>
+      <Position14>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="130" Column="19" TopLine="128"/>
+      </Position14>
+      <Position15>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="128" Column="37" TopLine="122"/>
+      </Position15>
+      <Position16>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="1627" Column="40" TopLine="1422"/>
+      </Position16>
+      <Position17>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="485" Column="5" TopLine="462"/>
+      </Position17>
+      <Position18>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="72" Column="47" TopLine="1487"/>
+      </Position18>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>

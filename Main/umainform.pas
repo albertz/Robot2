@@ -118,12 +118,11 @@ type
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormPaint(Sender: TObject);
     procedure FormResize(Sender: TObject);
-    procedure GamePanelClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
     procedure GamePanelMouseDown(Sender: TOBject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure GamePanelMouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
-    procedure KnapsackPanelClick(Sender: TObject);
     procedure KnapsackPanelMouseDown(Sender: TOBject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure mnuEditorLoadClick(Sender: TObject);
@@ -290,16 +289,6 @@ end;
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
   InitGame();
-
-  // some hacks to make it better
-  KnapsackPanel.Color := clGray;
-  KnapsackPanel.Canvas.FillRect(0,0,KnapsackPanel.Width,KnapsackPanel.Height);
-{  LifeLabel.Font := MainForm.Font;
-  ScoresLabel.Font := MainForm.Font;
-  DiamondsLabel.Font := MainForm.Font;
-  GamePanel.OnPaint := @FormPaint;
-  KnapsackPanel.OnPaint := @FormPaint;
-  FormResize(MainForm); }
 end;
 
 procedure TMainForm.ComputerPlayerTimer(Sender: TObject);
@@ -399,9 +388,17 @@ begin
   DrawRoom();
 end;
 
-procedure TMainForm.GamePanelClick(Sender: TObject);
+procedure TMainForm.FormShow(Sender: TObject);
 begin
-
+  // some hacks to make it better
+  KnapsackPanel.Color := clGray;
+  KnapsackPanel.Canvas.FillRect(0,0,KnapsackPanel.Width,KnapsackPanel.Height);
+{  LifeLabel.Font := MainForm.Font;
+  ScoresLabel.Font := MainForm.Font;
+  DiamondsLabel.Font := MainForm.Font;
+  GamePanel.OnPaint := @FormPaint;
+  KnapsackPanel.OnPaint := @FormPaint;
+  FormResize(MainForm); }
 end;
 
 procedure TMainForm.GamePanelMouseDown(Sender: TOBject; Button: TMouseButton;
@@ -464,11 +461,6 @@ begin
   else
     exit;
   GamePanelMouseDown(Sender, Button, Shift, X, Y);
-end;
-
-procedure TMainForm.KnapsackPanelClick(Sender: TObject);
-begin
-
 end;
 
 procedure TMainForm.KnapsackPanelMouseDown(Sender: TOBject;

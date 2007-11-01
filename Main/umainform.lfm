@@ -19,6 +19,7 @@ object MainForm: TMainForm
   OnKeyDown = FormKeyDown
   OnPaint = FormPaint
   OnResize = FormResize
+  OnShow = FormShow
   Position = poDefaultPosOnly
   UseDockManager = True
   Visible = True
@@ -39,6 +40,8 @@ object MainForm: TMainForm
     Height = 352
     Width = 401
     Anchors = [akTop, akLeft, akRight, akBottom]
+    OnMouseDown = GamePanelMouseDown
+    OnMouseMove = GamePanelMouseMove
     Transparent = False
   end
   object KnapsackPanel: TImage
@@ -47,6 +50,7 @@ object MainForm: TMainForm
     Top = 360
     Width = 210
     Anchors = [akRight, akBottom]
+    OnMouseDown = KnapsackPanelMouseDown
     Transparent = False
   end
   object InfoPanel: TPanel
@@ -177,9 +181,9 @@ object MainForm: TMainForm
     top = 216
   end
   object OpenGameDialog: TOpenDialog
-    Title = 'Spielstand öffnen'
+    Title = 'Spielstand Ã¶ffnen'
     DefaultExt = '.spi'
-    Filter = 'Robot Spielstände (*.spi)|*.spi|alle Dateien (*)|*'
+    Filter = 'Robot SpielstÃ¤nde (*.spi)|*.spi|alle Dateien (*)|*'
     FilterIndex = 0
     Options = [ofFileMustExist, ofEnableSizing, ofViewDetail]
     left = 352
@@ -188,7 +192,7 @@ object MainForm: TMainForm
   object SaveGameDialog: TSaveDialog
     Title = 'Spielstand speichern'
     DefaultExt = '.spi'
-    Filter = 'Robot Spielstände (*.spi)|*.spi|alle Dateien (*)|*'
+    Filter = 'Robot SpielstÃ¤nde (*.spi)|*.spi|alle Dateien (*)|*'
     FilterIndex = 0
     left = 352
     top = 280
