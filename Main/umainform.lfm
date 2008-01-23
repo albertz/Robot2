@@ -4,9 +4,9 @@ object MainForm: TMainForm
   Top = 132
   Width = 400
   HorzScrollBar.Page = 399
-  VertScrollBar.Page = 418
+  VertScrollBar.Page = 441
   Caption = 'Robot 1.7'
-  ClientHeight = 419
+  ClientHeight = 442
   ClientWidth = 400
   Color = clWhite
   Font.Height = -11
@@ -25,7 +25,7 @@ object MainForm: TMainForm
   Visible = True
   object MessageBar: TLabel
     Height = 19
-    Top = 418
+    Top = 441
     Width = 399
     Anchors = [akLeft, akRight, akBottom]
     AutoSize = False
@@ -37,7 +37,7 @@ object MainForm: TMainForm
     Transparent = False
   end
   object GamePanel: TImage
-    Height = 306
+    Height = 329
     Width = 400
     Anchors = [akTop, akLeft, akRight, akBottom]
     OnMouseDown = GamePanelMouseDown
@@ -48,7 +48,7 @@ object MainForm: TMainForm
   object KnapsackPanel: TImage
     Left = 189
     Height = 99
-    Top = 314
+    Top = 337
     Width = 210
     Anchors = [akRight, akBottom]
     OnMouseDown = KnapsackPanelMouseDown
@@ -57,7 +57,7 @@ object MainForm: TMainForm
   end
   object InfoPanel: TPanel
     Height = 101
-    Top = 314
+    Top = 337
     Width = 181
     Anchors = [akLeft, akRight, akBottom]
     BevelOuter = bvNone

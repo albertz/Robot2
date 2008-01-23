@@ -2,24 +2,24 @@
 
 LazarusResources.Add('TMainForm','FORMDATA',[
   'TPF0'#9'TMainForm'#8'MainForm'#4'Left'#3#8#1#6'Height'#3#186#1#3'Top'#3#132#0
-  +#5'Width'#3#144#1#18'HorzScrollBar.Page'#3#143#1#18'VertScrollBar.Page'#3#162
-  +#1#7'Caption'#6#9'Robot 1.7'#12'ClientHeight'#3#163#1#11'ClientWidth'#3#144#1
+  +#5'Width'#3#144#1#18'HorzScrollBar.Page'#3#143#1#18'VertScrollBar.Page'#3#185
+  +#1#7'Caption'#6#9'Robot 1.7'#12'ClientHeight'#3#186#1#11'ClientWidth'#3#144#1
   +#5'Color'#7#7'clWhite'#11'Font.Height'#2#245#9'Font.Name'#6#22'Bitstream Ver'
   +'a Sans 12'#10'Font.Style'#11#6'fsBold'#0#10'KeyPreview'#9#4'Menu'#7#8'MainM'
   +'enu'#8'OnCreate'#7#10'FormCreate'#9'OnDestroy'#7#11'FormDestroy'#9'OnKeyDow'
   +'n'#7#11'FormKeyDown'#7'OnPaint'#7#9'FormPaint'#8'OnResize'#7#10'FormResize'
   +#6'OnShow'#7#8'FormShow'#8'Position'#7#16'poDefaultPosOnly'#14'UseDockManage'
-  +'r'#9#7'Visible'#9#0#6'TLabel'#10'MessageBar'#6'Height'#2#19#3'Top'#3#162#1#5
+  +'r'#9#7'Visible'#9#0#6'TLabel'#10'MessageBar'#6'Height'#2#19#3'Top'#3#185#1#5
   +'Width'#3#143#1#7'Anchors'#11#6'akLeft'#7'akRight'#8'akBottom'#0#8'AutoSize'
   +#8#7'Caption'#6#9'Robot 1.7'#5'Color'#7#7'clWhite'#12'Font.CharSet'#7#12'ANS'
   +'I_CHARSET'#11'Font.Height'#2#12#11'ParentColor'#8#11'Transparent'#8#0#0#6'T'
-  +'Image'#9'GamePanel'#6'Height'#3'2'#1#5'Width'#3#144#1#7'Anchors'#11#5'akTop'
+  +'Image'#9'GamePanel'#6'Height'#3'I'#1#5'Width'#3#144#1#7'Anchors'#11#5'akTop'
   +#6'akLeft'#7'akRight'#8'akBottom'#0#11'OnMouseDown'#7#18'GamePanelMouseDown'
   +#11'OnMouseMove'#7#18'GamePanelMouseMove'#7'OnPaint'#7#14'GamePanelPaint'#11
   +'Transparent'#8#0#0#6'TImage'#13'KnapsackPanel'#4'Left'#3#189#0#6'Height'#2
-  +'c'#3'Top'#3':'#1#5'Width'#3#210#0#7'Anchors'#11#7'akRight'#8'akBottom'#0#11
+  +'c'#3'Top'#3'Q'#1#5'Width'#3#210#0#7'Anchors'#11#7'akRight'#8'akBottom'#0#11
   +'OnMouseDown'#7#22'KnapsackPanelMouseDown'#7'OnPaint'#7#18'KnapsackPanelPain'
-  +'t'#11'Transparent'#8#0#0#6'TPanel'#9'InfoPanel'#6'Height'#2'e'#3'Top'#3':'#1
+  +'t'#11'Transparent'#8#0#0#6'TPanel'#9'InfoPanel'#6'Height'#2'e'#3'Top'#3'Q'#1
   +#5'Width'#3#181#0#7'Anchors'#11#6'akLeft'#7'akRight'#8'akBottom'#0#10'BevelO'
   +'uter'#7#6'bvNone'#12'ClientHeight'#2'e'#11'ClientWidth'#3#181#0#5'Color'#7#6
   +'clAqua'#11'ParentColor'#8#10'ParentFont'#9#8'TabOrder'#2#0#0#6'TLabel'#9'Li'

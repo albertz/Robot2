@@ -380,7 +380,8 @@ begin
   GamePanel.Picture := nil;
   // it seems that the picture is not initialized
   // therefore paint it grey first to avoid strange effects
-  GamePanel.Canvas.Color := clGray;
+  // TODO: this is not avail
+  //GamePanel.Canvas.Color := clGray;
   GamePanel.Canvas.FillRect(0,0,GamePanel.Width,GamePanel.Height);
 
   ResetRoomPic();
@@ -1367,6 +1368,10 @@ var
 begin
   Randomize(); // init randomizer
 
+{$IFDEF darwin}
+  // this is for MacOSX only to go out of the app-bundle
+  ChDir(ExtractFilePath(Application.ExeName) + '../../..');
+{$ENDIF}
   MySoundState := false;
   ResetRoomPic();
   ResetKnapsackPic();
@@ -1764,7 +1769,8 @@ begin
   // draw selection
   x := (MyKnapsackSelection-1) mod KNAPSACK_WIDTH;
   y := (MyKnapsackSelection-1) div KNAPSACK_WIDTH;
-  KnapsackPanel.Canvas.Color := clBlack;
+  // TODO: this is not avail
+  //KnapsackPanel.Canvas.Color := clBlack;
   KnapsackPanel.Canvas.Line(x*w,y*h,x*w,(y+1)*h-1);
   KnapsackPanel.Canvas.Line(x*w,y*h,(x+1)*w-1,y*h);
   KnapsackPanel.Canvas.Line((x+1)*w-1,y*h,(x+1)*w-1,(y+1)*h-1);
