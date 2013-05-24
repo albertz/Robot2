@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
 <CONFIG>
   <ProjectOptions>
-    <PathDelim Value="/"/>
-    <Version Value="6"/>
+    <Version Value="7"/>
     <General>
+      <Flags>
+        <LRSInOutputDirectory Value="False"/>
+      </Flags>
       <MainUnit Value="0"/>
-      <IconPath Value="./"/>
       <TargetFileExt Value=""/>
       <Title Value="Robot"/>
       <ActiveEditorIndexAtStart Value="0"/>
@@ -40,12 +41,12 @@
       </Unit0>
       <Unit1>
         <Filename Value="umainform.pas"/>
-        <ComponentName Value="MainForm"/>
         <IsPartOfProject Value="True"/>
-        <ResourceFilename Value="umainform.lrs"/>
+        <ComponentName Value="MainForm"/>
+        <ResourceBaseClass Value="Form"/>
         <UnitName Value="uMainForm"/>
-        <CursorPos X="16" Y="1371"/>
-        <TopLine Value="1361"/>
+        <CursorPos X="16" Y="6"/>
+        <TopLine Value="24"/>
         <EditorIndex Value="0"/>
         <UsageCount Value="181"/>
         <Loaded Value="True"/>
@@ -297,7 +298,7 @@
         <UsageCount Value="10"/>
       </Unit39>
     </Units>
-    <JumpHistory Count="5" HistoryIndex="4">
+    <JumpHistory Count="6" HistoryIndex="5">
       <Position1>
         <Filename Value="umainform.pas"/>
         <Caret Line="375" Column="1" TopLine="373"/>
@@ -318,19 +319,20 @@
         <Filename Value="umainform.pas"/>
         <Caret Line="1372" Column="38" TopLine="1358"/>
       </Position5>
+      <Position6>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="1371" Column="16" TopLine="1361"/>
+      </Position6>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>
-    <Version Value="5"/>
+    <Version Value="8"/>
     <Target>
       <Filename Value="robot"/>
     </Target>
     <SearchPaths>
       <SrcPath Value="$(LazarusDir)/lcl/;$(LazarusDir)/lcl/interfaces/$(LCLWidgetType)/"/>
     </SearchPaths>
-    <CodeGeneration>
-      <Generate Value="Faster"/>
-    </CodeGeneration>
     <Linking>
       <Options>
         <PassLinkerOptions Value="True"/>
