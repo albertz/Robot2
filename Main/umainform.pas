@@ -201,6 +201,7 @@ type
     procedure SetPauseState(s: boolean);
     Procedure CopyRect(DstCanvas: TCanvas; const Dest: TRect; SrcCanvas: TCanvas; const Source: TRect);
 
+public
     MyWorld: TWorld; // the world
     MyWorldPlayers: TWorldPlayers; // all players
     MyRoomNum: TRoomNum; // selected room of my world
@@ -303,8 +304,7 @@ begin
   UnInitGame();
 end;
 
-procedure TMainForm.FormKeyDown(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
+procedure TMainForm.FormKeyDown(Sender: TObject; var Key: Word, Shift: TShiftState);
 begin
   if Key = Ord('P') then
     SetPauseState(not MyPauseState)
@@ -469,8 +469,7 @@ begin
   DrawRoom();
 end;
 
-procedure TMainForm.KnapsackPanelMouseDown(Sender: TOBject;
-  Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
+procedure TMainForm.KnapsackPanelMouseDown(Sender: TOBject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
 var
   kx,ky: Integer;
   w,h: Integer;
