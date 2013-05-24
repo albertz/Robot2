@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <CONFIG>
-  <Compiler Value="/usr/local/bin/fpc" Date="1201076413"/>
-  <Params Value=" -S2cgi -OG1 -gl  -k-framework -kCarbon -vewnhix -l -Fl/usr/X11R6/lib/ -Fu../lazarus/lcl/units/i386-darwin/ -Fu../lazarus/lcl/units/i386-darwin/carbon/ -Fu../lazarus/packager/units/i386-darwin/ -Fu. -dLCL -dLCLcarbon robot.lpr"/>
+  <Compiler Value="/usr/local/bin/ppc386" Date="1359911592"/>
+  <Params Value=" -MObjFPC -Scgi -O1 -g -gl  -k-framework -kCarbon  -k-framework -kCarbon -k-framework -kOpenGL -k-dylib_file -k/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib:/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib -vewnhix -Fu/Developer/lazarus/lcl/units/i386-darwin/carbon -Fu/Developer/lazarus/lcl/units/i386-darwin -Fu/Developer/lazarus/components/lazutils/lib/i386-darwin -Fu/Developer/lazarus/packager/units/i386-darwin -Fu/Users/az/Programmierung/Robot2/ -l -dLCL -dLCLcarbon robot.lpr"/>
+  <Complete Value="False"/>
 </CONFIG>
