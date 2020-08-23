@@ -1,40 +1,40 @@
 { This is an automatically generated lazarus resource file }
 
 LazarusResources.Add('TMainForm','FORMDATA',[
-  'TPF0'#9'TMainForm'#8'MainForm'#4'Left'#3#8#1#6'Height'#3#186#1#3'Top'#3#132#0
-  +#5'Width'#3#144#1#18'HorzScrollBar.Page'#3#143#1#18'VertScrollBar.Page'#3#185
-  +#1#7'Caption'#6#9'Robot 1.7'#12'ClientHeight'#3#186#1#11'ClientWidth'#3#144#1
-  +#5'Color'#7#7'clWhite'#11'Font.Height'#2#245#9'Font.Name'#6#22'Bitstream Ver'
-  +'a Sans 12'#10'Font.Style'#11#6'fsBold'#0#10'KeyPreview'#9#4'Menu'#7#8'MainM'
-  +'enu'#8'OnCreate'#7#10'FormCreate'#9'OnDestroy'#7#11'FormDestroy'#9'OnKeyDow'
-  +'n'#7#11'FormKeyDown'#7'OnPaint'#7#9'FormPaint'#8'OnResize'#7#10'FormResize'
-  +#6'OnShow'#7#8'FormShow'#8'Position'#7#16'poDefaultPosOnly'#14'UseDockManage'
-  +'r'#9#10'LCLVersion'#6#7'1.0.8.0'#7'Visible'#9#0#6'TLabel'#10'MessageBar'#4
-  +'Left'#2#0#6'Height'#2#19#3'Top'#3#185#1#5'Width'#3#143#1#7'Anchors'#11#6'ak'
-  +'Left'#7'akRight'#8'akBottom'#0#8'AutoSize'#8#7'Caption'#6#9'Robot 1.7'#5'Co'
-  +'lor'#7#7'clWhite'#12'Font.CharSet'#7#12'ANSI_CHARSET'#11'Font.Height'#2#12
+  'TPF0'#9'TMainForm'#8'MainForm'#4'Left'#3'D'#1#6'Height'#3#215#1#3'Top'#3#141
+  +#0#5'Width'#3#183#1#18'HorzScrollBar.Page'#3#143#1#18'VertScrollBar.Page'#3
+  +#185#1#7'Caption'#6#9'Robot 1.7'#12'ClientHeight'#3#215#1#11'ClientWidth'#3
+  +#183#1#5'Color'#7#7'clWhite'#11'Font.Height'#2#245#9'Font.Name'#6#22'Bitstre'
+  +'am Vera Sans 12'#10'Font.Style'#11#6'fsBold'#0#10'KeyPreview'#9#4'Menu'#7#8
+  +'MainMenu'#8'OnCreate'#7#10'FormCreate'#9'OnDestroy'#7#11'FormDestroy'#9'OnK'
+  +'eyDown'#7#11'FormKeyDown'#7'OnPaint'#7#9'FormPaint'#8'OnResize'#7#10'FormRe'
+  +'size'#6'OnShow'#7#8'FormShow'#8'Position'#7#16'poDefaultPosOnly'#14'UseDock'
+  +'Manager'#9#10'LCLVersion'#6#7'1.0.8.0'#7'Visible'#9#0#6'TLabel'#10'MessageB'
+  +'ar'#4'Left'#2#0#6'Height'#2#19#3'Top'#3#214#1#5'Width'#3#182#1#7'Anchors'#11
+  +#6'akLeft'#7'akRight'#8'akBottom'#0#8'AutoSize'#8#7'Caption'#6#9'Robot 1.7'#5
+  +'Color'#7#7'clWhite'#12'Font.CharSet'#7#12'ANSI_CHARSET'#11'Font.Height'#2#12
   +#11'ParentColor'#8#10'ParentFont'#8#11'Transparent'#8#0#0#6'TImage'#9'GamePa'
-  +'nel'#4'Left'#2#0#6'Height'#3'I'#1#3'Top'#2#0#5'Width'#3#144#1#7'Anchors'#11
+  +'nel'#4'Left'#2#0#6'Height'#3'f'#1#3'Top'#2#0#5'Width'#3#183#1#7'Anchors'#11
   +#5'akTop'#6'akLeft'#7'akRight'#8'akBottom'#0#11'OnMouseDown'#7#18'GamePanelM'
   +'ouseDown'#11'OnMouseMove'#7#18'GamePanelMouseMove'#7'OnPaint'#7#14'GamePane'
-  +'lPaint'#0#0#6'TImage'#13'KnapsackPanel'#4'Left'#3#189#0#6'Height'#2'c'#3'To'
-  +'p'#3'Q'#1#5'Width'#3#210#0#7'Anchors'#11#7'akRight'#8'akBottom'#0#11'OnMous'
+  +'lPaint'#0#0#6'TImage'#13'KnapsackPanel'#4'Left'#3#228#0#6'Height'#2'c'#3'To'
+  +'p'#3'n'#1#5'Width'#3#210#0#7'Anchors'#11#7'akRight'#8'akBottom'#0#11'OnMous'
   +'eDown'#7#22'KnapsackPanelMouseDown'#7'OnPaint'#7#18'KnapsackPanelPaint'#0#0
-  +#6'TPanel'#9'InfoPanel'#4'Left'#2#0#6'Height'#2'e'#3'Top'#3'Q'#1#5'Width'#3
-  +#181#0#7'Anchors'#11#6'akLeft'#7'akRight'#8'akBottom'#0#10'BevelOuter'#7#6'b'
-  +'vNone'#12'ClientHeight'#2'e'#11'ClientWidth'#3#181#0#5'Color'#7#6'clAqua'#11
-  +'ParentColor'#8#8'TabOrder'#2#0#0#6'TLabel'#9'LifeLabel'#4'Left'#3#128#0#6'H'
+  +#6'TPanel'#9'InfoPanel'#4'Left'#2#0#6'Height'#2'e'#3'Top'#3'n'#1#5'Width'#3
+  +#220#0#7'Anchors'#11#6'akLeft'#7'akRight'#8'akBottom'#0#10'BevelOuter'#7#6'b'
+  +'vNone'#12'ClientHeight'#2'e'#11'ClientWidth'#3#220#0#5'Color'#7#6'clAqua'#11
+  +'ParentColor'#8#8'TabOrder'#2#0#0#6'TLabel'#9'LifeLabel'#4'Left'#3#167#0#6'H'
   +'eight'#2#16#4'Hint'#6'1Anzahl verbleibender Leben bis zum Tod (GameOver)'#3
   +'Top'#2#8#5'Width'#2'0'#9'Alignment'#7#14'taRightJustify'#7'Anchors'#11#5'ak'
   +'Top'#7'akRight'#0#7'Caption'#6#8'Leben: 0'#11'ParentColor'#8#14'ParentShowH'
-  +'int'#8#8'ShowHint'#9#0#0#6'TLabel'#11'ScoresLabel'#4'Left'#2'|'#6'Height'#2
-  +#16#4'Hint'#6#13'Anzahl Punkte'#3'Top'#2'('#5'Width'#2'4'#9'Alignment'#7#14
+  +'int'#8#8'ShowHint'#9#0#0#6'TLabel'#11'ScoresLabel'#4'Left'#3#163#0#6'Height'
+  +#2#16#4'Hint'#6#13'Anzahl Punkte'#3'Top'#2'('#5'Width'#2'4'#9'Alignment'#7#14
   +'taRightJustify'#7'Anchors'#11#5'akTop'#7'akRight'#0#7'Caption'#6#9'Punkte: '
   +'0'#11'ParentColor'#8#14'ParentShowHint'#8#8'ShowHint'#9#0#0#6'TLabel'#13'Di'
-  +'amondsLabel'#4'Left'#2'c'#6'Height'#2#16#4'Hint'#6'"Anzahl gesetzter Diaman'
-  +'ten (von 3)'#3'Top'#2'G'#5'Width'#2'H'#9'Alignment'#7#14'taRightJustify'#7
-  +'Anchors'#11#5'akTop'#7'akRight'#0#7'Caption'#6#12'Diamanten: 0'#11'ParentCo'
-  +'lor'#8#14'ParentShowHint'#8#8'ShowHint'#9#0#0#0#9'TMainMenu'#8'MainMenu'#4
+  +'amondsLabel'#4'Left'#3#138#0#6'Height'#2#16#4'Hint'#6'"Anzahl gesetzter Dia'
+  +'manten (von 3)'#3'Top'#2'G'#5'Width'#2'H'#9'Alignment'#7#14'taRightJustify'
+  +#7'Anchors'#11#5'akTop'#7'akRight'#0#7'Caption'#6#12'Diamanten: 0'#11'Parent'
+  +'Color'#8#14'ParentShowHint'#8#8'ShowHint'#9#0#0#0#9'TMainMenu'#8'MainMenu'#4
   +'left'#3'i'#1#3'top'#3#176#0#0#9'TMenuItem'#7'mnuGame'#7'Caption'#6#5'Spiel'
   +#0#9'TMenuItem'#10'mnuGameNew'#7'Caption'#6#11'Neues Spiel'#7'OnClick'#7#15
   +'mnuGameNewClick'#0#0#9'TMenuItem'#11'mnuGameLoad'#7'Caption'#6#11'Spiel lad'
