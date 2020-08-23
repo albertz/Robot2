@@ -4,6 +4,7 @@ backup
 *.o
 *.ppu
 *.or
+*.compiled
 
 *.app
 *.exe
