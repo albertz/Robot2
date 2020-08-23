@@ -5,17 +5,19 @@ where you lead your controled body through different very exiting rooms up to th
 For your way, you need the right keys for the dors,
 you need to destroy your enemies (the robots) and you have to solve some problems.
 
-(Project copied from [here](http://www.az2000.de/projects/robot2/). From 2006.)
+For a new Python implementation of the same game,
+see [PyOverheadGame](https://github.com/albertz/PyOverheadGame).
 
 # Idea
 
 The idea based on the very old, famous, same-named [DOS-game Robot](http://www.tom-games.de/robot/).
 The gameplay is the same, but the original game is much more complex,
 the graphics are better and the world is bigger.
-The project Robot 2 is a port of my old
+The project Robot 2 (from 2006) is a port of my old
 [Visual Basic project Robot 1](http://www.az2000.de/projects/robot/) (from around 1999),
 one of my very first games.
-Robot 2 was coded in Object Pascal for Free Pascal with [Lazarus](https://www.lazarus-ide.org/).
+Robot 2 was coded in Object Pascal for [Free Pascal](https://www.freepascal.org/)
+with [Lazarus](https://www.lazarus-ide.org/).
 You can desribe Lazarus as a plattform-independend, open-source and free alternative to Delphi.
 Take a look at it, it is very nice.
 
@@ -32,6 +34,8 @@ for more information.
 The Super Special Laura Edition (1.6) (renamed to 'Hopper')
 is a special version for Laura and contains some modifications of the look onto the game...
 Version 1.7 now contains a complete new world with new mysteries and an ingame-leveleditor.
+
+(Project copied from [here](http://www.az2000.de/projects/robot2/), which includes some binary downloads.)
 
 # Leveleditor
 
@@ -70,4 +74,15 @@ Open the Lazarus project-file (robot.lpi) with Lazarus (download it here)
 and look at the code of umainform.pas.
 Perhaps the most interesting functions for you are MoveToPlace and UseKnapsackSelection.
 If you make any change and think it will be interesting for others, simply mail me.
+
+# Screenshots
+
+Robot 1.5 - inside of the game - Linux GTK
+![Robot 1.5 game](screenshots/robot1.5-screenshot1.png?raw=true "Robot 1.5 game")
+
+Robot 1.7 - startscreen - Linux GTK
+![Robot 1.7 startscreen](screenshots/robot1.7-shot1.png?raw=true "Robot 1.7 startscreen")
+
+Robot 1.7 - leveleditor - Linux GTK
+![Robot 1.7 leveleditor](screenshots/robot1.7-shot2.png?raw=true "Robot 1.7 leveleditor")
 
