@@ -304,7 +304,7 @@ begin
   UnInitGame();
 end;
 
-procedure TMainForm.FormKeyDown(Sender: TObject; var Key: Word, Shift: TShiftState);
+procedure TMainForm.FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
 begin
   if Key = Ord('P') then
     SetPauseState(not MyPauseState)
